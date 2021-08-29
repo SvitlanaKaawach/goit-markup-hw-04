@@ -111,6 +111,7 @@ img {
 /* Header-address */
 .header-icon {
   fill: currentColor;
+  margin-right: 10px;
 }
 
 .address {
@@ -122,6 +123,7 @@ img {
   margin-left: 50px;
 }
 .address-link {
+  display: flex;
   align-items: center;
 
   font-weight: 500;
@@ -147,7 +149,6 @@ img {
 /* Hero */
 
 .hero {
-  height: auto;
   background-color: #c4c4c4;
   text-align: center;
   padding: 200px 0px;
@@ -202,15 +203,18 @@ img {
   height: 1px;
   margin: -1px;
 }
-.services-icon {
+.services-icon-container {
   display: flex;
-  width: 270px;
-  height: 120px;
-  margin: auto;
+  justify-content: center;
   margin-bottom: 30px;
-  padding: 25px 100px;
-
+  padding: 25px 0;
   background-color: #f5f4fa;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 4px;
+}
+.services-icon {
+  height: 70px;
+  width: 70px;
 }
 .services-icon:not(:last-child) {
   margin-right: 30px;
@@ -329,25 +333,16 @@ img {
 .social-list {
   display: flex;
   margin-top: 16px;
-  margin-right: auto;
-  margin-left: auto;
   justify-content: center;
 }
 
 .social-icon {
-  fill: var(--icon-color);
-  margin-right: auto;
-  margin-left: auto;
-  border-radius: 100%;
-  background-color: #ffffff;
-  justify-content: center;
-  align-items: center;
-  padding: 12px;
+  fill: currentColor;
 }
-.social-icon:hover,
-.social-icon:focus {
-  fill: #ffffff;
+.social-links:hover,
+.social-links:focus {
   background-color: var(--accent-color);
+  color: #ffffff;
 }
 .sicial-item {
   display: flex;
@@ -355,7 +350,14 @@ img {
 .social-item:not(:last-child) {
   margin-right: 10px;
 }
-.social-link {
+.social-links {
+  color: var(--icon-color);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 /* Clients section*/
 .clients {
@@ -371,7 +373,6 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px #afb1b8;
 }
 .clients-item + .clients-item {
   margin-left: 30px;
@@ -385,7 +386,10 @@ img {
 .clients-link:hover .client-icon,
 .clients-link:focus .client-icon {
   fill: var(--accent-color);
-  border: 1px solid var(--accent-color);
+}
+.clients-link:hover,
+.clients-link:focus {
+  border-color: var(--accent-color);
 }
 
 .clients-item {
@@ -399,7 +403,6 @@ img {
   align-items: center;
   justify-content: center;
 
-  box-sizing: border-box;
   border: solid 1px #afb1b8;
   border-radius: 4px;
 }
@@ -426,7 +429,7 @@ img {
   background-color: #f5f4fa;
   padding: 6px 22px;
   border-radius: 4px;
-  border: 4px transparent;
+  border: 1px solid transparent;
 }
 .all {
   min-width: 73px;
@@ -447,10 +450,14 @@ img {
 .button-filter:hover {
   background-color: var(--accent-color);
   color: var(--main-title-color);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border: 1px solid #000000;
 }
 .button-filter:focus {
   background-color: var(--accent-color);
   color: var(--main-title-color);
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border: 1px solid #000000;
 }
 
 /* Gallery-portfolio */
@@ -488,6 +495,13 @@ img {
   letter-spacing: 0.03em;
   color: var(--main-text-color);
 }
+.gallery-card {
+  display: block;
+}
+.gallery-card:focus,
+.gallery-card:hover {
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
 
 /* Card-content */
 
@@ -500,9 +514,6 @@ img {
 
 a {
   text-decoration: none;
-}
-.card:hover {
-  box-shadow: 0px 4px 4px 0px #00000040;
 }
 
 /* Card-thumb */
@@ -568,29 +579,31 @@ address {
   margin-bottom: 20px;
 }
 .footer-social-link {
+  align-items: baseline;
   display: flex;
 }
 .social-footer {
   margin-left: 70px;
   justify-content: center;
 }
-.footer-icon {
-  fill: #ffffff;
-  box-shadow: 0px 4px 4px 0px #00000040;
-  margin-right: auto;
-  margin-left: auto;
-  box-sizing: border-box;
-  border-radius: 100%;
-  width: 44px;
+.footer-link {
+  display: flex;
   height: 44px;
+  width: 44px;
+  box-shadow: 0px 4px 4px 0px #00000040;
+  border-radius: 50%;
   justify-content: center;
   align-items: center;
-  padding: 12px;
+  color: #ffffff;
+}
+.footer-icon {
+  fill: #ffffff;
 }
 .footer-social-list + .footer-social-list {
   margin-left: 10px;
 }
-.footer-icon:hover,
-.footer-icon:focus {
+.footer-link:hover,
+.footer-link:focus {
   background-color: var(--accent-color);
+  color: #ffffff;
 }
